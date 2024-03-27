@@ -11,11 +11,11 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>Hi Veeramanikandan A</p>
-        <div style={{border:"2px solid black",width: 500, height: 200}}>
+        <p>Hi Veeramanikandan Arjunan</p>
+        <div style={{border:"2px solid black",width: 200, height: 200}}>
           <SignatureCanvas
           ref={data=>setSign(data)}
-          canvasProps={{width: 500, height: 200, className: 'sigCanvas'}}
+          canvasProps={{width: 200, height: 200, className: 'sigCanvas'}}
           />
         </div>
         <button onClick={handleclear}>Clear</button>
