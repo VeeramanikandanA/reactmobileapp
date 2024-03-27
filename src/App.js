@@ -4,22 +4,36 @@ import SignatureCanvas from 'react-signature-canvas'
 import { useState } from 'react';
 
 function App() {
-  const [sign,setSign]= useState();
-  const handleclear= ()=>{
+  const [sign, setSign] = useState();
+  const [url, setUrl] = useState();
+  const handleclear = () => {
     sign.clear();
+    setUrl('');
   }
+  const handlesave = () => {
+    setUrl(sign.getTrimmedCanvas().toDataURL('image/png'))
+
+    // const canvass = sign.getTrimmedCanvas();
+    // console.log(canvass); 
+    // const dataUrl = canvass.toDataURL();
+  }
+  console.log(sign);
   return (
     <div className="App">
       <header className="App-header">
-        <p>Hi Veeramanikandan Arjunan</p>
-        <div style={{border:"2px solid black",width: 200, height: 200,backgroundColor:'white'}}>
+        <h2>Hi ArjunVeera</h2>
+        <p>Signature</p>
+        <div className='sign_box'>
           <SignatureCanvas
-          ref={data=>setSign(data)}
-          canvasProps={{width: 200, height: 200, className: 'sigCanvas'}}
+            ref={data => setSign(data)}
+            canvasProps={{ width: 250, height: 150, className: 'sigCanvas' }}
           />
         </div>
-        <button onClick={handleclear}>Clear</button>
-        {/* <button onClick={handlesave}>Save</button> */}
+        <div style={{ display: 'flex', gap: '10px', margin: '10px' }}>
+          <button onClick={handleclear} className='can_btn'>Clear</button>
+          <button onClick={handlesave} className='save_btn'>Save</button>
+        </div>
+        <img src={url} />
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
