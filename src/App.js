@@ -13,9 +13,7 @@ function App() {
   const handlesave = () => {
     setUrl(sign.getTrimmedCanvas().toDataURL('image/png'))
 
-    // const canvass = sign.getTrimmedCanvas();
-    // console.log(canvass); 
-    // const dataUrl = canvass.toDataURL();
+   
   }
   console.log(sign);
   return (
