@@ -31,7 +31,7 @@ function App() {
           <button onClick={handleclear} className='can_btn'>Clear</button>
           <button onClick={handlesave} className='save_btn'>Save</button>
         </div>
-        <img src={url} />
+        <img src={url} alt="logo"/>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
