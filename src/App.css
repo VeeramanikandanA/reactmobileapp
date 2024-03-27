@@ -14,14 +14,14 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #ffffff;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .App-link {
@@ -32,7 +32,33 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+
+/* ------------------------------------------------------------------------------------------------- */
+.sign_box {
+  box-shadow: 0px 0px 4px 0px #2f2f2f;
+  width: 250;
+  height: 150;
+  background-color: 'white';
+}
+.can_btn{
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: red;
+  color: white;
+  font-size: 15px;
+}
+.save_btn{
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: green;
+  color: white;
+  font-size: 15px;
 }
