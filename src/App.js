@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>Hi Veeramanikandan Arjunan</p>
-        <div style={{border:"2px solid black",width: 200, height: 200}}>
+        <div style={{border:"2px solid black",width: 200, height: 200,backgroundColor:'white'}}>
           <SignatureCanvas
           ref={data=>setSign(data)}
           canvasProps={{width: 200, height: 200, className: 'sigCanvas'}}
